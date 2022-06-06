@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Menubar from './component/Menubar';
+import Header from './component/header';
+import Sidebar from './component/sidebar';
+import Footer from './component/footer';
+import Mid from './component/Mid';
+import{BrowserRouter} from 'react-router-dom';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <BrowserRouter>
+      <Header></Header>
+      <Menubar></Menubar>
+      <div class="text-center">
+     <img class="img-fluid" src="https://www.prosperity.com/application/files/thumbnails/small/1014/7801/9426/Nepal_header.jpg" />
     </div>
+    
+    <Sidebar></Sidebar>
+    <Mid></Mid>
+    <Footer></Footer>
+    </BrowserRouter>
+
+       </>
+
+      
   );
 }
-
 export default App;
